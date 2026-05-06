@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品詳情 | L'Éclat Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .detail-container {
+            padding: 10rem 10% 5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+        }
+        .product-gallery img {
+            width: 100%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .product-details h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .detail-price {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 2rem;
+        }
+        .detail-description {
+            margin-bottom: 2rem;
+            color: #666;
+        }
+        .purchase-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .purchase-options input {
+            width: 60px;
+            padding: 0.5rem;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .detail-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="L'Éclat Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">公司簡介</a></li>
+            <li><a href="rings.html">戒指</a></li>
+            <li><a href="necklaces.html">項鍊</a></li>
+            <li><a href="jewelry.html">飾品</a></li>
+            <li><a href="accessories.html">配件</a></li>
+            <li><a href="others.html">其他</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <main class="detail-container">
+        <div class="product-gallery">
+            <img id="product-img" src="assets/ring_1.png" alt="產品圖片">
+        </div>
+        <div class="product-details">
+            <h2 id="product-name">精緻珠寶單品</h2>
+            <p class="detail-price" id="product-price">TWD 0</p>
+            <div class="detail-description">
+                <p>這款單品展現了 L'Éclat 對於極致工藝的追求。採用高品質材料製作，結合現代設計美學，無論是日常配戴還是特殊場合，都能展現您的獨特魅力。</p>
+            </div>
+            <div class="purchase-options">
+                <input type="number" value="1" min="1">
+                <button class="btn" onclick="alert('已加入購物車！')">加入購物車</button>
+            </div>
+            <div class="additional-info">
+                <p><strong>材質：</strong> 18K 金 / 優質鑽石 / 天然珍珠</p>
+                <p><strong>保固：</strong> 提供一年原廠保固與永久清潔服務</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <h4>關於 L'Éclat</h4>
+            <p>我們致力於將傳統工藝與現代設計完美結合。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速連結</h4>
+            <ul>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li><a href="rings.html">所有產品</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>聯絡我們</h4>
+            <ul>
+                <li>Email: info@leclat.com</li>
+                <li>Phone: +886 2 2345 6789</li>
+                <li>Address: 台北市信義區信義路五段</li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mock data to handle detail page variation
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        
+        if (id) {
+            const nameEl = document.getElementById('product-name');
+            const priceEl = document.getElementById('product-price');
+            const imgEl = document.getElementById('product-img');
+
+            if (id.startsWith('ring')) {
+                nameEl.innerText = "璀璨系列 鑽石戒指";
+                priceEl.innerText = "TWD 28,800";
+            } else if (id.startsWith('necklace')) {
+                nameEl.innerText = "珍珠幻影 項鍊";
+                priceEl.innerText = "TWD 15,600";
+                imgEl.src = "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=687";
+            } else if (id.startsWith('jewelry')) {
+                nameEl.innerText = "流金歲月 手鍊";
+                priceEl.innerText = "TWD 8,900";
+                imgEl.src = "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&q=80&w=687";
+            }
+        }
+    </script>
+</body>
+</html>

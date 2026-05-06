@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 | L'Éclat Jewelry</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 10rem 10% 5rem;
+        }
+        .contact-info h2 { margin-bottom: 2rem; }
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            font-family: inherit;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--charcoal);
+            color: white;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--transition);
+        }
+        .submit-btn:hover { background: var(--gold); }
+        @media (max-width: 768px) {
+            .contact-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="assets/logo.png" alt="L'Éclat Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="about.html">公司簡介</a></li>
+            <li><a href="rings.html">戒指</a></li>
+            <li><a href="necklaces.html">項鍊</a></li>
+            <li><a href="jewelry.html">飾品</a></li>
+            <li><a href="accessories.html">配件</a></li>
+            <li><a href="others.html">其他</a></li>
+            <li><a href="contact.html">聯絡我們</a></li>
+        </ul>
+    </nav>
+
+    <main class="contact-container">
+        <div class="contact-info">
+            <h2>聯絡我們</h2>
+            <p>如果您對我們的產品有任何疑問，或需要訂製服務，請隨時與我們聯繫。</p>
+            <div style="margin-top: 3rem;">
+                <p><strong>客服專線：</strong> +886 2 2345 6789</p>
+                <p><strong>電子信箱：</strong> info@leclat.com</p>
+                <p><strong>營業時間：</strong> 週一至週五 10:00 - 19:00</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label>您的姓名</label>
+                    <input type="text" placeholder="姓名">
+                </div>
+                <div class="form-group">
+                    <label>電子郵件</label>
+                    <input type="email" placeholder="email@example.com">
+                </div>
+                <div class="form-group">
+                    <label>主旨</label>
+                    <input type="text" placeholder="詢問主題">
+                </div>
+                <div class="form-group">
+                    <label>訊息內容</label>
+                    <textarea rows="5" placeholder="請輸入您的訊息..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">傳送訊息</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <h4>關於 L'Éclat</h4>
+            <p>我們致力於將傳統工藝與現代設計完美結合。</p>
+        </div>
+        <div class="footer-col">
+            <h4>快速連結</h4>
+            <ul>
+                <li><a href="about.html">關於我們</a></li>
+                <li><a href="contact.html">聯絡我們</a></li>
+                <li><a href="rings.html">所有產品</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>聯絡我們</h4>
+            <ul>
+                <li>Email: info@leclat.com</li>
+                <li>Phone: +886 2 2345 6789</li>
+                <li>Address: 台北市信義區信義路五段</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
